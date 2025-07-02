@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de pontos</title>
+</head>
+<body>
+    <h1>Contador de pontos</h1>
+    <p id="pontuacao">Pontuação: 0</p>
+    <button onclick="ganharPontos()">Ganhar Pontos</button>
+    <button onclick="perderPontos()">Perder Pontos</button>
+    <button onclick="ganharvida()">Ganhar Vida</button>
+    <button onclick="resetar()">Resetar Jogo</button>
+    <script>
+        let pontuacao = 0;
+
+        function ganharPontos(){
+            pontuacao++ ;
+            document.getElementById("pontuacao").innerText = "Pontuação: " + pontuacao;
+        }
+        function perderPontos(){
+            pontuacao-- ;
+            document.getElementById("pontuacao").innerText = "Pontuação: " + pontuacao;
+        }
+        function ganharvida(){
+            pontuacao += 10;
+            document.getElementById("pontuacao").innerText = "Pontuação: " + pontuacao;
+        }
+        function resetar(){
+            pontuacao = 0;
+            document.getElementById("pontuacao").innerText = "Pontuação: " + pontuacao;
+        }
+    </script>
+</body>
+</html>
